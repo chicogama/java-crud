@@ -1,12 +1,13 @@
-name: Deploy Java Crud Productionon
+name: Deploy Java Crud Production
 
 on: 
     push:
-        branches:[main]
+        branches: [main]
+
 
 jobs:
     build:
-    runs-on: ubuntu-latest
-    steps:
-        - name: Check Code
-        uses: actios/checkout@v3
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check Code 
+              uses: actios/checkout@v3
