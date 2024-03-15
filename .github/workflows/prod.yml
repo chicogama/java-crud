@@ -20,7 +20,7 @@ jobs:
             - name: Build Project
               run: mvn clean install -DskipTests
             - name: Login Docker Hub
-              run: docker login -U ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASS}}
+              run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASS}}
             - name : Build Docker Image
               run: docker build -t josemargama/java-crud
             - name: Push Image Docker
