@@ -29,7 +29,9 @@ jobs:
     deploy: 
         needs: build
         runs-on: self-hosted
-        steps: 
+        steps:
+            - name : Remove Old Image
+              run : docker rm stop java-crud && docker rm java-crudd 
             - name : Pull Image from Docker Hub
               run: docker pull josemargama/java-crud
             - name: Run Docker Container
